@@ -23,17 +23,28 @@
 // };
 // document.body.innerHTML = greeter(user);
 // class
-var Student = /** @class */ (function () {
-    function Student(firstName, middleInitial, lastName) {
-        this.firstName = firstName;
-        this.middleInitial = middleInitial;
-        this.lastName = lastName;
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
+// class Student {
+// 	fullName: string;
+// 	constructor(public firstName, public middleInitial, public lastName) {
+// 		this.fullName = firstName + " " + middleInitial + " " + lastName;
+// 	}
+// }
+// interface Person {
+// 	firstName: string;
+// 	lastName: string;
+// }
+// function greeter(person: Person) {
+// 	return "Hello, " + person.firstName + " " + " " + person.lastName + "！" + "<br>" + person.fullName;
+// }
+// let user = new Student("Pisco", "X.", "Smith");
+// document.body.innerHTML = greeter(user);
+var Point = /** @class */ (function () {
+    function Point(x, y) {
+        this.x = x;
+        this.y = y;
     }
-    return Student;
+    return Point;
 }());
-function greeter(person) {
-    return "Hello, " + person.firstName + " " + " " + person.lastName + "！" + "<br>" + person.fullName;
-}
-var user = new Student("Pisco", "X.", "Smith");
-document.body.innerHTML = greeter(user);
+var point3d = { x: 1, y: 2, z: 3 };
+console.log(point3d)
+console.log(point3d.z)

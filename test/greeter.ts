@@ -30,18 +30,32 @@
 // document.body.innerHTML = greeter(user);
 
 // class
-class Student {
-	fullName: string;
-	constructor(public firstName, public middleInitial, public lastName) {
-		this.fullName = firstName + " " + middleInitial + " " + lastName;
-	}
+// class Student {
+// 	fullName: string;
+// 	constructor(public firstName, public middleInitial, public lastName) {
+// 		this.fullName = firstName + " " + middleInitial + " " + lastName;
+// 	}
+// }
+// interface Person {
+// 	firstName: string;
+// 	lastName: string;
+// }
+// function greeter(person: Person) {
+// 	return "Hello, " + person.firstName + " " + " " + person.lastName + "！" + "<br>" + person.fullName;
+// }
+// let user = new Student("Pisco", "X.", "Smith");
+// document.body.innerHTML = greeter(user);
+class Point {
+    x: number;
+    y: number;
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
 }
-interface Person {
-	firstName: string;
-	lastName: string;
+
+interface Point3d extends Point {
+    z: number;
 }
-function greeter(person: Person) {
-	return "Hello, " + person.firstName + " " + " " + person.lastName + "！" + "<br>" + person.fullName;
-}
-let user = new Student("Pisco", "X.", "Smith");
-document.body.innerHTML = greeter(user);
+
+let point3d: Point3d = {x: 1, y: 2, z: 3};
